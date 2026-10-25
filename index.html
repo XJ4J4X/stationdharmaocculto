@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DHARMA INITIATIVE • STATION OCCULTO</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 fill=%22%2320C20E%22>13</text></svg>">
+</head>
+<body>
+
+  <div id="boot-screen" class="screen active">
+    <div class="boot-badge">
+      DHARMA INITIATIVE &bull; STATION OCCULTO<br>
+      Le manoir d'Aminato
+    </div>
+    <br><br>
+    <div id="boot-btn" class="center-text blink">
+      [ CLIQUER POUR ALLUMER LA CONSOLE DE MODÉRATION ]
+    </div>
+    <br><br>
+    <div class="boot-warning">
+      AVERTISSEMENT : Terminal de modération des viewers fantômes et des screamers. Audio recommandé (Attention aux oreilles).
+    </div>
+  </div>
+
+  <div id="terminal-screen" class="screen">
+
+    <div id="dharma-hud">
+      <div class="hud-item">
+        <span>LOC :</span>
+        <strong style="color: var(--bright-green);">STATION OCCULTO [MANOIR AMINATO]</strong>
+      </div>
+      <div class="hud-item">
+        <span>CHRONO DU LIVE :</span>
+        <span id="hud-timer" class="hud-timer">108:00</span>
+      </div>
+      <div class="hud-item">
+        <span>SÉCURITÉ DU TCHAT :</span>
+        <span id="hud-progress" style="color: var(--bright-green); font-weight: bold;">0%</span>
+      </div>
+      <div class="hud-item">
+        <button id="sound-btn" class="sound-toggle-btn" type="button">SON : ON</button>
+      </div>
+    </div>
+
+    <div id="gotham-header">
+      <div class="ascii-logo">
+      ___  _  _ ____ ____ _  _ ____   _ _  _ _ ___ _ ____ ___ _ _  _ ____ 
+      |  \ |__| |__| |__/ |\/| |__|   | |\ | |  |  | |__|  |  | |  | |___ 
+      |__/ |  | |  | |  \ |  | |  |   | | \| |  |  | |  |  |  |  \/  |___ 
+             [ DHARMA INITIATIVE • STATION OCCULTO ]             
+                   [ LE MANOIR D'AMINATO ]                   
+      </div>
+      <div class="header-details">
+        SYSTÈME : OCCULTO OS - MAINFRAME CATHODIQUE<br>
+        ANOMALIE ACTIVE : ENTITÉ DHARMA, VIEWERS FANTÔMES &amp; ESPRITS FRAPPEURS<br>
+        COMMANDES UTILES : 'aide' | 'indice' | 'otan' | 'morse' | 'aminato' | 'manoir' | 'bip'
+      </div>
+    </div>
+
+    <div id="output"></div>
+
+    <form id="formulaire-saisie" action="javascript:void(0);">
+      <div id="input-line" class="hidden">
+        <span class="prompt">>_ </span>
+        <span id="input-display"></span><span class="cursor"></span>
+        <input type="text" id="hidden-input" enterkeyhint="send" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <button type="submit" id="bouton-valider-mobile">OK</button>
+      </div>
+    </form>
+
+    <div id="shortcuts-bar">
+      <span>Commandes rapides :</span>
+      <span class="shortcut-chip" data-cmd="aide">[ aide ]</span>
+      <span class="shortcut-chip" data-cmd="indice">[ indice ]</span>
+      <span class="shortcut-chip" data-cmd="otan">[ otan ]</span>
+      <span class="shortcut-chip" data-cmd="morse">[ morse ]</span>
+      <span class="shortcut-chip" data-cmd="bip">[ alerte morse ]</span>
+      <span class="shortcut-chip" data-cmd="aminato">[ aminato ]</span>
+      <span class="shortcut-chip" data-cmd="manoir">[ manoir ]</span>
+      <span class="shortcut-chip" data-cmd="statut">[ statut ]</span>
+      <span class="shortcut-chip" data-cmd="clear">[ effacer ]</span>
+    </div>
+
+  </div>
+
+  <script src="audio.js"></script>
+  <script src="enigmes.js"></script>
+  <script src="terminal.js"></script>
+</body>
+</html>
